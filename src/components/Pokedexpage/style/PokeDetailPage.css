@@ -1,0 +1,130 @@
+.header__pokedet {
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+.pokedetail {
+  width: 80%;
+  height: auto;
+  top: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+  gap: 0px;
+  border: 12px black;
+  border-radius: 4px 0px 0px 0px;
+  opacity: 0px;
+  background: #fff;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail__princ {
+  display: flexbox;
+  justify-content: center;
+  text-align: center;
+}
+.pokedetail__img {
+  width: 300px;
+  display: inline-block;
+  margin: 0 auto;
+  left: 50%;
+}
+.title {
+  font-size: 2rem;
+  color: blue;
+  text-shadow: 1px 1px 3px black;
+}
+
+.descr__detail {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 1em;
+  background-color: rgb(248, 246, 246);
+  border-radius: 8px;
+  /*-webkit-box-shadow: 5px 5px 15px 5px #000000;*/
+  box-shadow: 5px 5px 15px 5px #000000;
+  margin-top: 20px;
+}
+.descr__detail2,
+.type__poke {
+  width: 100%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+.descr__detail2,
+.desc__stats {
+  background-color: rgb(248, 246, 246);
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.type__desc {
+  padding: 0.7em;
+  margin: 4px;
+  border-color: rgb(13, 241, 241);
+  color: blue;
+  background-color: #d9dedf;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.poke__type__desc {
+  width: 100%;
+  margin-top: 20px;
+}
+.desc__stats {
+  text-align: left;
+  margin: 25px 4px;
+  padding: 0.5em 1em;
+}
+
+.stats__titles {
+  text-align: center;
+  font-size: 40px;
+  color: blue;
+  text-shadow: 2px 2px 6px #000000;
+}
+
+.stats__title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.progress__bar {
+  width: 100%;
+  background-color: #f0f0f0;
+  height: 20px;
+  border-radius: 10px;
+  margin: 10px 0 5px;
+  
+}
+
+.progress__stats {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px;
+  width: var(--pb);
+ 
+}
+.selecttype {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+ font-size: 0.9em;
+ padding: 0.3em;
+ 
+}
+.btn__pag {
+  display: inline-flex;
+  justify-items: center;
+  
+}
