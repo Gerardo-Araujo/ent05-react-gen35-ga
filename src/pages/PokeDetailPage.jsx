@@ -24,7 +24,7 @@ console.log(name)
   return (
     <div className="header__pokedet">
       <header>
-        <img className="home__img" src="public/pokedex.png" alt="" srcset="" />
+        <img className="home__img" src="/pokedex.png" alt="" srcset="" />
       </header>
       <article className="pokedetail">
         <img

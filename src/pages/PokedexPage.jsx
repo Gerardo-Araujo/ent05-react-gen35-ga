@@ -41,7 +41,7 @@ const PokedexPage = () => {
 
   return (
     <div className="pokedex__header">
-      <img className="home__img" src="public/pokedex.png" alt="" srcset="" />
+      <img className="home__img" src="/pokedex.png" alt="" srcset="" />
 
       <p className="title__header">
         Bienvenido <span>{trainer}</span>, aqui podras encontrar tu Pokemon
