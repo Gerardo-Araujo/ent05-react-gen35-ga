@@ -110,10 +110,11 @@
 }
 
 .progress__stats {
+  
   height: 100%;
   background-color: #4caf50;
   border-radius: 10px;
-  width: var(--pb);
+ 
  
 }
 .selecttype {

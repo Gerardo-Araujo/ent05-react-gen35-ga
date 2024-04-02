@@ -13,13 +13,15 @@ const PokeDetailPage = () => {
     getPokemon();
   }, [name]);
 
-  /*
-console.log(name)
- 
-  console.log(pokemon?.abilities.length)
+  const ProgressBar = ({ value, maxValue }) => {
+    const progress = (value / maxValue) * 100;
   
-   //*{pokemon?.types[1].type.name}*/
- 
+    return (
+      <div className="progress__bar">
+        <div className="progress__stats" style={{ width: `${progress}%` }}></div>
+      </div>
+    );
+  };
 
   return (
     <div className="header__pokedet">
@@ -65,6 +67,7 @@ console.log(name)
             <section className="poke__type__desc">
               <h2>Habilidades</h2>
               <div className="type__poke">
+               
                 <span className="type__desc">
                   {pokemon?.abilities[0].ability.name}
                 </span>
@@ -72,6 +75,9 @@ console.log(name)
                   {pokemon?.abilities[1].ability.name}
                 </span>
               </div>
+
+
+
             </section>
           </div>
           <div className="desc__stats">
@@ -81,36 +87,30 @@ console.log(name)
                 <h2>HP</h2>
                 <span>{pokemon?.stats[0].base_stat}/150</span>
               </div>
-              <div className="progress__bar">
-                <div className="progress__stats"></div>
-              </div>
+              <ProgressBar value={pokemon?.stats[0].base_stat} maxValue={150} />
             </section>
             <section>
               <div className="stats__title">
                 <h2>Ataque</h2>
+                <div ></div>
                 <span>{pokemon?.stats[1].base_stat}/150</span>
               </div>
-              <div className="progress__bar">
-                <div className="progress__stats"></div>
-              </div>
+              <ProgressBar value={pokemon?.stats[1].base_stat} maxValue={150} />
+              
             </section>
             <section>
               <div className="stats__title">
                 <h2>Defensa</h2>
                 <span>{pokemon?.stats[2].base_stat}/150</span>
               </div>
-              <div className="progress__bar">
-                <div className="progress__stats"></div>
-              </div>
+              <ProgressBar value={pokemon?.stats[2].base_stat} maxValue={150} />
             </section>
             <section>
               <div className="stats__title">
                 <h2>Velocidad</h2>
                 <span>{pokemon?.stats[5].base_stat}/150</span>
               </div>
-              <div className="progress__bar">
-                <div className="progress__stats"></div>
-              </div>
+              <ProgressBar value={pokemon?.stats[5].base_stat} maxValue={150} />
             </section>
           </div>
         </div>
