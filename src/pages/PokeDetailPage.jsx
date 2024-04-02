@@ -13,12 +13,35 @@ const PokeDetailPage = () => {
     getPokemon();
   }, [name]);
 
+  let type_arr;
+  let  abilities_arr;
+  if (pokemon?.types.length < 2) {
+   /**  pokemon.types.push("");
+    type_arr = pokemon?.types[0].type.name;
+    console.log(type_arr);*/
+    type_arr = "";
+  } else {
+     type_arr = pokemon?.types[1].type.name;
+  }
+
+  if (pokemon?.abilities.length < 2) {
+    /* pokemon.abilities.push("");
+    abilities_arr = pokemon?.abilities[0].type.name;
+    console.log(abilities_arr);*/
+    abilities_arr = "";
+  } else {
+    abilities_arr = pokemon?.abilities[1].ability.name;
+  }
+
   const ProgressBar = ({ value, maxValue }) => {
     const progress = (value / maxValue) * 100;
-  
+
     return (
       <div className="progress__bar">
-        <div className="progress__stats" style={{ width: `${progress}%` }}></div>
+        <div
+          className="progress__stats"
+          style={{ width: `${progress}%` }}
+        ></div>
       </div>
     );
   };
@@ -59,25 +82,17 @@ const PokeDetailPage = () => {
                 <span className="type__desc">
                   {pokemon?.types[0].type.name}
                 </span>
-                <span className="type__desc">
-                  {pokemon?.types[1].type.name}
-                </span>
+                <span className="type__desc">{type_arr}</span>
               </div>
             </section>
             <section className="poke__type__desc">
               <h2>Habilidades</h2>
               <div className="type__poke">
-               
                 <span className="type__desc">
                   {pokemon?.abilities[0].ability.name}
                 </span>
-                <span className="type__desc">
-                  {pokemon?.abilities[1].ability.name}
-                </span>
+                <span className="type__desc">{abilities_arr}</span>
               </div>
-
-
-
             </section>
           </div>
           <div className="desc__stats">
@@ -92,11 +107,10 @@ const PokeDetailPage = () => {
             <section>
               <div className="stats__title">
                 <h2>Ataque</h2>
-                <div ></div>
+                <div></div>
                 <span>{pokemon?.stats[1].base_stat}/150</span>
               </div>
               <ProgressBar value={pokemon?.stats[1].base_stat} maxValue={150} />
-              
             </section>
             <section>
               <div className="stats__title">
